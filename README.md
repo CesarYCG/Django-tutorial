@@ -22,26 +22,35 @@ Para la creación de un proyecto web con Django, haremos uso de la terminal (cmd
 1. Abre una terminal (CMD) en Windows
 2. Con la terminal (o explorador de archivos, si lo prefieres) crea un directorio donde será el repositorio para el proyecto a crearse. 
 3. Creado el directorio, nos movemos a él desde la terminal de Windows. 
-4. Para crear nuestro primer proyecto, ya posicionados en el directorio creado, utilizamos la sintaxis
+4. Para crear nuestro primer proyecto, ya posicionados en el directorio creado, utilizamos la sintaxis:
+
     > django-admin startproject \[Nombre de tu proyecto]
-    Donde en Nombre de tu proyecto, debes poner el nombre de tu eleccion, ejemplo:
-    >django-admin startproject Proyecto1
-    Pulsamos enter y en el explorador de archivos podremos observar que se ha creado la carpeta con archivos **.py** dentro.
+
+Donde en Nombre de tu proyecto, debes poner el nombre de tu eleccion, ejemplo:
+
+    > django-admin startproject Proyecto1
+
+Pulsamos enter y en el explorador de archivos podremos observar que se ha creado la carpeta con archivos **.py** dentro.    
+Al posicionarlos con la terminal dentro del directorio que acabamos de crear, tendremos acceso a una variedad de comandos reconocidmos por un archivo **manage.py** para poder verlos todos, podemos hacer uso de la sintaxis:
     
-    Al posicionarlos con la terminal dentro del directorio que acabamos de crear, tendremos acceso a una variedad de comandos reconocidmos por un archivo **manage.py** para poder verlos todos, podemos hacer uso de la sintaxis:
     > manage.py help
     
-    De igual forma puedes obtener más conocimiento sobre estos comandos en la documentación de la página de [Django][1].
-    [1]: <https://docs.djangoproject.com/en/3.2/ref/django-admin/> "django-admin and manage.py"
+De igual forma puedes obtener más conocimiento sobre estos comandos en la documentación de la página de [Django][1].
+[1]: <https://docs.djangoproject.com/en/3.2/ref/django-admin/> "django-admin and manage.py"
     
 5. Para aplicar los cambios realizados y poder comenzar a trabajar en nuestro proyecto, es necesario hacer uso de el comando **migrations**. De forma general, las migraciones nos permiten *propagar* nuestros cambios (agregados, eliminaciones, etc) dentro de nuestra base de datos. Para realizar nuestra primera migración (y con ello levantar nuestro proyecto), utilizamos la sintaxis:
+
   > python manage.py migrate
-  Aparecerá una secuencia de información que terminará con una validación **OK**, de momento no haremos mucho caso a esta información. Realizado esto solo nos queda correr un servidor local en nuestra máquina local.
+
+Aparecerá una secuencia de información que terminará con una validación **OK**, de momento no haremos mucho caso a esta información. Realizado esto solo nos queda correr un servidor local en nuestra máquina local.
 
 6. Por defecto Django incluye un servidor *ligero* (no recomendado para proyectos avanzados) y éste corre en el puerto 8000 con la IP **127.0.0.1 por default** (puede cambiarse si así se desea, para efectos prácticos, nosotros no lo cambiaremos).
   Así, para lanzar nuestro servidor, utilizaremos la sintaxis
+  
   >python manage.py runserver
-  Lo que nos permitirá visualizar la página default incluída en el proyecto de Django al introducir en el navegador web de nuestra preferencia la dirección IP que nos proporciona en la terminal, bajo el mensaje:
+
+Lo que nos permitirá visualizar la página default incluída en el proyecto de Django al introducir en el navegador web de nuestra preferencia la dirección IP que nos proporciona en la terminal, bajo el mensaje:
+
   >Starting development server at http://127.0.0.1:8000/
 
-  Con esto finaliza el levantamiento de nuestro proyecto, posteriormente podremos trabajar en el proyecto utilizando el editor de código de nuestra preferencia. 
+Con esto finaliza el levantamiento de nuestro proyecto, posteriormente podremos trabajar en el proyecto utilizando el editor de código de nuestra preferencia. 
