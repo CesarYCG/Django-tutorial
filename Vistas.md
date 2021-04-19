@@ -30,10 +30,10 @@ podremos hacer uso de las request). Esto se realiza con la sintaxis:
 
 Y ahora procederemos a realiar nuestra primera vista, por ejemplo, crearemos la vista saludo, el código se dará de la forma:
 
-  from django.http import HttpResponse
+    from django.http import HttpResponse
   
-  def saludo(request): #Aqui se crea la primera vista
-    return HttpResponse("Hola mundo, primera vista hecha con Django :D") #Esto es lo que retornaremos por esta peticion
+    def saludo(request): #Aqui se crea la primera vista
+        return HttpResponse("Hola mundo, primera vista hecha con Django :D") #Esto es lo que retornaremos por esta peticion
  
 Nótese que la creación de la vista se declara como si fuera una función cuyo **parámetro** es el response. La instrucción
 **return HttpResponse** será lo que retornará dicha función al ser invocada. Con esto tenemos la creación de nuestra primer
@@ -41,19 +41,19 @@ página, pero falta referenciarla (conectarla) para que pueda ser accesible por 
 
 Para realizar esta conexión, se realiza en el archivo **urls.py** de modo que nos colocaremos ahí.
 
-#### Agregando la vista a urls.py
+### Agregando la vista a urls.py
 
 Para agregar estas vistas en urls.py, se hace a forma de listas. Para agregar una vista recién creada, tenemos que importarlas.
 Para importar nuestra vista de saludo, la importaremos con.
 
-  from Proyecto1.views import saludo #Aqui se está importando la vista saludo
+    from Proyecto1.views import saludo #Aqui se está importando la vista saludo
   
 Posteriormetne debemos agregarla en forma de lista en *urlpatterns*, que es una variable que lista las vistas. 
 
-  urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('saludo/', saludo),
-  ]
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('saludo/', saludo),
+    ]
 
 Una vez agregada, con el servidor levantado podemos acceder desde la dirección proporcionada por el servidor y el nombre dado
 a la vista, en este caso, le dimos el nombre "saludo", de forma que podremos accesar con:
