@@ -60,6 +60,8 @@ a la vista, en este caso, le dimos el nombre "saludo", de forma que podremos acc
 
 > http://127.0.0.1:8000/saludo/
 
+Al accesar, veremos algo como: 
 
+![Primera Página con Django](/img/capturaPrimeraVista.PNG)
 
 
